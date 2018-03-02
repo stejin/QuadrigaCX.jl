@@ -29,7 +29,7 @@ function get_auth(handler)
   key = handler.Config["key"]
   client = handler.Config["client"]
   secret = handler.Config["secret"]
-  nonce = Int(now())
+  nonce = Dates.value(now())
   msg = string(nonce, client, key)
   signature = digest(MD_SHA256, msg, secret)
   Dict("key" => handler.Config["key"],
