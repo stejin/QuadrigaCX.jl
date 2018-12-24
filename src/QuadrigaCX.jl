@@ -1,7 +1,11 @@
 __precompile__()
+
 module QuadrigaCX
-  export  QuadrigaCXHandler,
-          get_balances
+  export  QuadrigaCXRestClient,
+          get_balances,
+          add_buy_order,
+          add_sell_order,
+          get_order
 
   include("client.jl")
 
